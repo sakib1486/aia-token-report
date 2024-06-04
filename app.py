@@ -1,10 +1,7 @@
 import streamlit as st  # type: ignore
-import pandas as pd
 from collections import defaultdict
 from dbOps import init_connection, get_users_token, update_token_limit
 from applyFilters import apply_filters
-
-
 
 def main():
     st.set_page_config(layout="wide")
@@ -59,3 +56,6 @@ def main():
                     st.experimental_rerun()  # Rerun the script to update the UI
     else:
         st.write("No users found")
+
+if __name__=="__main__":
+    main()
